@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peça seu orçamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="contactForm" novalidate>
+            <h1>Peça seu orçamento agora mesmo!</h1>
+
+            <div class="row">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder=" "
+                        maxlength="60"
+                        autocomplete="name"
+                        required
+                    >
+                    <label for="nome">Nome</label>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder=" "
+                        maxlength="100"
+                        autocomplete="email"
+                        required
+                    >
+                    <label for="email">E-mail</label>
+                    <small class="error-message"></small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder=" "
+                        maxlength="15"
+                        inputmode="numeric"
+                        autocomplete="tel"
+                        required
+                    >
+                    <label for="telefone">Telefone</label>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <select id="servico" name="servico" required>
+                        <option value="" disabled selected></option>
+                        <option value="servico1">Serviço 1</option>
+                        <option value="servico2">Serviço 2</option>
+                        <option value="servico3">Serviço 3</option>
+                    </select>
+                    <label for="servico">Escolha o serviço que deseja</label>
+                    <small class="error-message"></small>
+                </div>
+            </div>
+
+            <div class="form-group full">
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="4"
+                    placeholder=" "
+                    minlength="10"
+                    maxlength="500"
+                    required
+                ></textarea>
+                <label for="mensagem">Mensagem</label>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="btn-wrapper">
+                <button type="submit" id="submitButton" disabled>
+                    <span class="button-text">Enviar</span>
+                    <span class="spinner" aria-hidden="true"></span>
+                </button>
+            </div>
+        </form>
+
+        <div id="sucesso" role="status" aria-live="polite">
+            <div class="success-icon">✓</div>
+            <p>Mensagem enviada com sucesso!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
